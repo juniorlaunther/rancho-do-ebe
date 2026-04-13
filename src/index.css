@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  --font-display: "Playfair Display", serif;
+
+  --color-brand-orange: #ff741f;
+  --color-brand-green: #4c5c17;
+  --color-brand-brown: #794d35;
+  --color-brand-cream: #fdfaf6;
+  --color-brand-dark: #1a1a1a;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-cream text-brand-dark font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+.glass {
+  @apply bg-white/80 backdrop-blur-md border border-white/20;
+}
+
+.section-padding {
+  @apply py-16 md:py-24 px-4 sm:px-6 lg:px-8;
+}
+
+.btn-primary {
+  @apply bg-brand-orange text-white px-8 py-3 rounded-full font-medium transition-all hover:opacity-90 hover:scale-105 active:scale-95;
+}
+
+.btn-outline {
+  @apply border-2 border-brand-green text-brand-green px-8 py-3 rounded-full font-medium transition-all hover:bg-brand-green hover:text-white;
+}
